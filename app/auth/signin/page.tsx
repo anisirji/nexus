@@ -5,24 +5,22 @@ import { useSearchParams } from "next/navigation";
 
 export default function SignIn() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/";
+  const callbackUrl = searchParams.get("callbackUrl") || "/chat";
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="w-full max-w-md space-y-8">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50">
+      <div className="w-full max-w-md space-y-8 p-8 bg-white rounded-lg shadow-lg">
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
-            Sign in to Nexus
-          </h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Connect your Google Workspace to get started
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Nexus</h1>
+          <p className="text-lg text-gray-600">
+            Your AI-powered Google Workspace assistant
           </p>
         </div>
         
         <div className="mt-8 space-y-6">
           <button
             onClick={() => signIn("google", { callbackUrl })}
-            className="w-full flex justify-center items-center gap-3 px-4 py-3 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="w-full flex justify-center items-center gap-3 px-6 py-4 border border-gray-300 rounded-lg shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -42,17 +40,11 @@ export default function SignIn() {
                 d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
               />
             </svg>
-            Continue with Google
+            Sign in with Google
           </button>
           
-          <div className="text-center text-sm text-gray-600">
-            <p>By signing in, you agree to grant access to:</p>
-            <ul className="mt-2 space-y-1">
-              <li>• Gmail (read, send, and manage emails)</li>
-              <li>• Calendar (view and create events)</li>
-              <li>• Drive (access and organize files)</li>
-              <li>• Tasks (create and manage tasks)</li>
-            </ul>
+          <div className="text-center text-xs text-gray-500">
+            <p>By signing in, you'll grant access to your Google Workspace</p>
           </div>
         </div>
       </div>

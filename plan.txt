@@ -1,0 +1,188 @@
+Updated Phase 1 Development Plan
+AI + Google Workspace Integration (Enhanced)
+
+Project Overview
+Build an AI assistant that deeply integrates with Google Workspace - handling Gmail, Calendar, Drive, Tasks, Forms, and Meet. Users log in with Google, grant permissions, then use natural language to automate complex workflows like scheduling interviews with automated emails, forms, and follow-ups.
+
+🚀 Sprint 1: Core Foundation
+Setup Tasks
+
+ Initialize Next.js + TypeScript project
+ Setup database (Supabase/PostgreSQL)
+ Configure environment variables
+ Install dependencies (OpenAI SDK, Google APIs, Stripe)
+ Create folder structure (app/, components/, lib/, services/)
+
+Authentication Tasks
+
+ Setup NextAuth with Google OAuth
+ Create user tables (users, sessions, usage_logs)
+ Build login/logout flow
+ Implement session management
+ Test authentication pipeline
+ also login and users infor need to save in db
+
+Google Cloud Tasks
+
+ Create Google Cloud Project
+ Enable APIs: Gmail, Calendar, Drive, Tasks, Forms, Meet
+ Configure OAuth consent screen with all scopes
+ Generate API credentials
+ Set redirect URIs
+
+
+🔧 Sprint 2: API Integrations
+Core Google Workspace Tasks
+
+ Gmail: Read, search, send, draft emails
+ Gmail: Add attachments support
+ Calendar: List, create, update events
+ Calendar: Generate Meet links automatically
+ Calendar: Check availability/conflicts
+ Drive: Search, read, create files
+ Drive: Create folder structures
+ Tasks: Create, list, update tasks
+ Tasks: Set due dates and reminders
+ Forms: Create basic forms
+ Forms: Generate shareable links
+ Create unified service wrapper functions
+ Implement robust error handling
+
+OpenRouter Integration
+
+ Setup OpenRouter client with multiple models
+ Implement complex function calling schemas
+ Build streaming response handler
+ Create multi-step tool execution pipeline
+ Add smart model selection (cost vs capability)
+ Implement usage and cost tracking
+ Setup intelligent fallback mechanisms
+
+
+💬 Sprint 3: Chat & Workflows
+Chat Interface Tasks
+
+ Build conversational UI with context awareness
+ Message history with workflow tracking
+ Streaming responses with progress indicators
+ Rich tool result rendering (calendars, emails, forms)
+ Multi-step workflow visualization
+ Error recovery suggestions
+ Quick action buttons
+ Workflow templates dropdown
+
+Workflow Automation Engine
+
+ Interview Scheduler: Meet + Calendar + Email + Form
+ Meeting Coordinator: Find slots, send invites, create agendas
+ Email Assistant: Smart drafts with context from Drive/Calendar
+ Task Manager: Create tasks from emails/meetings
+ Daily Briefing: Summarize day's events, emails, tasks
+ Follow-up System: Automatic reminders and emails
+ Workflow state management
+ Undo/redo functionality
+
+Payment Integration
+
+ Stripe setup with usage-based pricing
+ Create tiered plans (Starter/Pro/Team)
+ Usage metering for API calls
+ Subscription management dashboard
+ Invoice generation
+ Free tier with limits
+
+
+🎨 Sprint 4: Polish & Deploy
+Frontend Excellence
+
+ Landing page with workflow demos
+ Interactive feature showcase
+ Workflow template gallery
+ Real-time usage dashboard
+ Settings for workflow preferences
+ Mobile-responsive design
+ Dark/light mode
+ Onboarding flow with permission explanation
+
+Testing & Optimization
+
+ End-to-end workflow testing
+ API rate limit handling
+ Performance optimization for complex workflows
+ Security audit (OAuth scopes, data handling)
+ Error recovery testing
+ Load testing for concurrent workflows
+
+Deployment & Launch
+
+ Vercel deployment with preview URLs
+ Environment configuration for all APIs
+ Custom domain setup
+ Monitoring (Vercel Analytics + Sentry)
+ Create demo workflows
+ Video tutorials for key workflows
+ Beta user onboarding with feedback form
+
+
+📋 Enhanced MVP Checklist
+Must Have - Core Features
+
+ Google OAuth with all workspace permissions
+ Email Operations: Read, search, send, draft with attachments
+ Smart Scheduling: Calendar + Meet links generation
+ Task Management: Create tasks from conversations
+ Form Creation: Basic feedback/survey forms
+ Drive Integration: Search and organize files
+ 3 Killer Workflows:
+
+ Interview Scheduler (Meet + Email + Form)
+ Meeting Coordinator (Calendar + Email)
+ Daily Assistant (Briefing + Tasks)
+
+
+ OpenRouter with 3+ model options
+ Usage-based billing
+ Real-time streaming responses
+
+Nice to Have - Week 1 Additions
+
+ Email templates library
+ Recurring meeting support
+ Form response tracking
+ Calendar availability sharing
+ Bulk email operations
+ Smart file organization in Drive
+ Workflow history and replay
+
+Save for Phase 2
+
+ MCP server integration
+ Knowledge base with RAG
+ Custom workflow builder
+ Team collaboration features
+ Zapier/Make.com integration
+ API access for developers
+ White-label options
+ Advanced analytics dashboard
+ Custom AI training on company data
+
+
+🎯 Key Differentiators
+
+Complete Workflow Automation: Not just chat - actual multi-step workflows
+All Google Tools: Gmail + Calendar + Drive + Tasks + Forms + Meet in one place
+Smart Context: AI understands relationships between emails, meetings, and tasks
+One-Click Workflows: "Schedule interview" does everything automatically
+Transparent Pricing: Pay for what you use, see costs in real-time
+
+
+Success Metrics - Week 1
+
+5 working end-to-end workflows
+<3 second response time for simple queries
+<10 second execution for complex workflows
+100 beta signups
+10 paying customers
+80% workflow completion rate
+Zero critical security issues
+
